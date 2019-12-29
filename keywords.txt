@@ -1,0 +1,23 @@
+#######################################
+# Classes, datatypes (KEYWORD1)
+#######################################
+
+C420PRM	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init            	KEYWORD2
+getState        	KEYWORD2
+toggle  	        KEYWORD2
+useReserveSupply	KEYWORD2
+useMainSupply    	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+_C420PRD_DEFAULT_PIN  LITERAL1
+_C420PRD_DEFAULT_STATE  LITERAL1
+_C420PRD_RS  LITERAL1
+_C420PRD_MS  LITERAL1
