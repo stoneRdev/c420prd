@@ -9,15 +9,13 @@ C420PRM	KEYWORD1
 #######################################
 
 init            	KEYWORD2
-getState        	KEYWORD2
-toggle  	        KEYWORD2
+isOnMain        	KEYWORD2
 useReserveSupply	KEYWORD2
 useMainSupply    	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-_C420PRD_DEFAULT_PIN  LITERAL1
-_C420PRD_DEFAULT_STATE  LITERAL1
-_C420PRD_RS  LITERAL1
-_C420PRD_MS  LITERAL1
+PIN_MASK  LITERAL1
+RESERVE_OR_MASK  LITERAL1
+MAIN_AND_MASK  LITERAL1

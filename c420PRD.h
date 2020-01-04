@@ -1,27 +1,20 @@
 
+ 
 #ifndef _C420PRD_H
 #define _C420PRD_H
 
-#include <Arduino.h>
-
-#define _C420PRD_DEFAULT_PIN 7
-#define _C420PRD_DEFAULT_STATE false
-#define _C420PRD_RS true
-#define _C420PRD_MS false
+//#include <Arduino.h>
 
 class C420PRD {
 public:
-	C420PRD();
-	C420PRD(uint8_t pin);
-	C420PRD(bool initialState);
-	C420PRD(uint8_t pin, bool initialState);
-	void init();
-	bool getState();
-	void toggle();
-	void useReserveSupply();
-	void useMainSupply();
-private:
-	void setRelayPin();
-	uint8_t pin;
-	bool state;
+	static volatile uint8_t * PORT = &PORTD;
+	static const uint8_t PIN_MASK = B10000000;
+	static const uint8_t RESERVE_OR_MASK = B10000000;
+	static const uint8_t MAIN_AND_MASK = B01111111;
+	static void init();
+	static bool isOnMain();
+	static void useReserveSupply();
+	static void useMainSupply();
 }
+
+#endif _C420PRD_H
